@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👑 The Coding Virtuoso | Full-Stack Developer Extraordinaire</title>
+    <title>Joshua Ledama | Full-Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -677,82 +677,6 @@
             gap: 10px;
         }
 
-        /* === Testimonials Section === */
-        #testimonials {
-            background-color: var(--dark);
-        }
-
-        .testimonials-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial-slide {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            margin: 0 20px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-content {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .testimonial-content::before, .testimonial-content::after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--primary);
-            opacity: 0.3;
-            position: absolute;
-        }
-
-        .testimonial-content::before {
-            top: -20px;
-            left: -15px;
-        }
-
-        .testimonial-content::after {
-            bottom: -40px;
-            right: -15px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .author-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--secondary);
-        }
-
-        .author-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .author-info h4 {
-            margin-bottom: 5px;
-            color: var(--secondary);
-        }
-
-        .author-info p {
-            font-size: 0.9rem;
-            color: rgba(248, 249, 250, 0.6);
-            margin-bottom: 0;
-        }
-
         /* === Contact Section === */
         #contact {
             background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.95)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
@@ -798,59 +722,6 @@
             color: rgba(248, 249, 250, 0.8);
         }
 
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 0 2px var(--secondary);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-submit {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .form-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
         /* === Footer === */
         footer {
             background-color: #0f0f1a;
@@ -859,7 +730,7 @@
 
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-bottom: 60px;
         }
@@ -989,6 +860,64 @@
             100% { transform: translateY(0) translateX(0); }
         }
 
+        /* === WhatsApp Button === */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .whatsapp-text {
+            position: fixed;
+            bottom: 50px;
+            right: 110px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-text::after {
+            content: '>>';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         /* === Responsive Styles === */
         @media (max-width: 1200px) {
             h1 { font-size: 3.5rem; }
@@ -1094,6 +1023,18 @@
             .footer-container {
                 grid-template-columns: 1fr;
             }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+
+            .whatsapp-text {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1124,10 +1065,16 @@
     </style>
 </head>
 <body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254725401725" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-text">Chat here</div>
+
     <!-- Header -->
     <header id="header">
         <div class="header-container container">
-            <a href="#" class="logo">The<span>CodingVirtuoso</span></a>
+            <a href="#" class="logo">Joshua<span>Ledama</span></a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -1150,9 +1097,9 @@
         <div class="container">
             <div class="hero-content">
                 <h1>I Transform Ideas Into Digital Masterpieces</h1>
-                <p class="hero-subtitle">Full-Stack Developer | Software Architect | Tech Visionary</p>
+                <p class="hero-subtitle">Full-Stack Developer | Software Engineer | Tech Innovator</p>
                 <p class="hero-description">
-                    With over a decade of experience crafting exceptional digital experiences, I bridge the gap between imagination and implementation. My code doesn't just work—it inspires, performs, and sets new standards in the industry.
+                    With my extensive training from top African tech institutions and hands-on experience, I bridge the gap between imagination and implementation. My code doesn't just work—it inspires, performs, and sets new standards.
                 </p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View My Work</a>
@@ -1177,37 +1124,37 @@
             <div class="cube-face bottom"><i class="fas fa-code"></i></div>
         </div>
         <div class="container">
-            <h2>About The Coding Virtuoso</h2>
+            <h2>About Joshua Ledama</h2>
             <div class="about-container">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="The Coding Virtuoso">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Joshua Ledama">
                 </div>
                 <div class="about-content">
                     <h3>The Developer Who Redefines Excellence</h3>
                     <p>
-                        I'm not just a developer—I'm a digital architect who crafts solutions that push boundaries. With an encyclopedic knowledge of over 20 programming languages and frameworks, I bring unparalleled expertise to every project.
+                        My journey began at the University of Nairobi where I earned my Software Engineering degree, laying a strong theoretical foundation. I then honed my practical skills at Moringa School's intensive bootcamp, mastering full-stack development.
                     </p>
                     <p>
-                        My approach combines technical mastery with creative vision. I don't just write code; I engineer experiences that users fall in love with. From blazing-fast algorithms to pixel-perfect interfaces, every line of code reflects my commitment to excellence.
+                        My education continued at ALX Africa, where I specialized in backend systems and cloud architecture, followed by advanced training at PLP Africa in AI and machine learning integration. This unique combination of formal education and cutting-edge practical training makes me a versatile developer.
                     </p>
                     <p>
-                        When Fortune 500 companies need digital transformation, startups need technical co-founders, or enterprises need to modernize their stack—they call me. My reputation for solving impossible problems precedes me.
+                        I approach every project with academic rigor and startup agility, creating solutions that are both technically sound and market-ready. My work has impacted users across Africa and beyond, solving real problems with elegant code.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">200+</div>
+                            <div class="stat-number">50+</div>
                             <div class="stat-label">Projects Completed</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">15M+</div>
+                            <div class="stat-number">500+</div>
                             <div class="stat-label">Users Impacted</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">99.9%</div>
+                            <div class="stat-number">100%</div>
                             <div class="stat-label">Client Satisfaction</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">10+</div>
+                            <div class="stat-number">5+</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
                     </div>
@@ -1440,7 +1387,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Enterprise Analytics Dashboard</h3>
                         <p class="project-description">
-                            A revolutionary business intelligence platform that processes 10M+ data points in real-time with beautiful visualizations and predictive analytics.
+                            A revolutionary business intelligence platform that processes data in real-time with beautiful visualizations and predictive analytics.
                         </p>
                         <div class="project-tech">
                             <span class="tech-item">React</span>
@@ -1463,7 +1410,7 @@
                     <div class="project-content">
                         <h3 class="project-title">AI-Powered Fitness Coach</h3>
                         <p class="project-description">
-                            A mobile app that uses computer vision to analyze workouts in real-time, providing personalized feedback and adaptive training programs.
+                            A mobile app that uses computer vision to analyze workouts in real-time, providing personalized feedback.
                         </p>
                         <div class="project-tech">
                             <span class="tech-item">React Native</span>
@@ -1486,7 +1433,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Medical Diagnosis AI</h3>
                         <p class="project-description">
-                            A deep learning system that analyzes medical imaging with 98.7% accuracy, assisting doctors in early disease detection and diagnosis.
+                            A deep learning system that analyzes medical imaging with high accuracy, assisting doctors in early disease detection.
                         </p>
                         <div class="project-tech">
                             <span class="tech-item">Python</span>
@@ -1509,7 +1456,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Decentralized Finance Platform</h3>
                         <p class="project-description">
-                            A complete DeFi ecosystem with lending, staking, and yield farming capabilities, handling $50M+ in transactions with zero downtime.
+                            A complete DeFi ecosystem with lending, staking, and yield farming capabilities.
                         </p>
                         <div class="project-tech">
                             <span class="tech-item">Solidity</span>
@@ -1532,7 +1479,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Next-Gen E-Commerce</h3>
                         <p class="project-description">
-                            An immersive shopping experience with AR product previews, AI recommendations, and one-click checkout processing 10,000+ orders daily.
+                            An immersive shopping experience with AR product previews and AI recommendations.
                         </p>
                         <div class="project-tech">
                             <span class="tech-item">Vue.js</span>
@@ -1555,7 +1502,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Social Network for Creators</h3>
                         <p class="project-description">
-                            A platform connecting 500K+ creators with fans, featuring real-time collaboration tools, monetization, and advanced content discovery.
+                            A platform connecting creators with fans, featuring real-time collaboration tools and monetization.
                         </p>
                         <div class="project-tech">
                             <span class="tech-item">Flutter</span>
@@ -1576,14 +1523,14 @@
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <h2>My Legendary Journey</h2>
+            <h2>Professional Journey</h2>
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <div class="timeline-date">2021 - Present</div>
                         <h3 class="timeline-title">Chief Technology Officer</h3>
                         <p class="timeline-description">
-                            Leading technical vision for a unicorn startup, scaling engineering team from 5 to 150, architecting systems handling 10M+ daily active users.
+                            Leading technical vision for a fast-growing startup, scaling engineering team and architecting systems handling thousands of daily active users.
                         </p>
                         <div class="timeline-tech">
                             <span class="tech-item">Leadership</span>
@@ -1594,10 +1541,10 @@
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <div class="timeline-date">2018 - 2021</div>
+                        <div class="timeline-date">2019 - 2021</div>
                         <h3 class="timeline-title">Senior Architect</h3>
                         <p class="timeline-description">
-                            Designed and implemented the core architecture for Fortune 500 company's digital transformation, reducing costs by 40% while improving performance.
+                            Designed and implemented core architecture for company's digital transformation, reducing costs while improving performance.
                         </p>
                         <div class="timeline-tech">
                             <span class="tech-item">AWS</span>
@@ -1608,10 +1555,10 @@
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <div class="timeline-date">2015 - 2018</div>
+                        <div class="timeline-date">2018 - 2019</div>
                         <h3 class="timeline-title">Lead Developer</h3>
                         <p class="timeline-description">
-                            Built and launched 3 successful SaaS products from scratch, each generating over $1M ARR within first year.
+                            Built and launched successful SaaS products from scratch, each generating significant revenue within first year.
                         </p>
                         <div class="timeline-tech">
                             <span class="tech-item">React</span>
@@ -1622,10 +1569,10 @@
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <div class="timeline-date">2012 - 2015</div>
+                        <div class="timeline-date">2017 - 2018</div>
                         <h3 class="timeline-title">Software Engineer</h3>
                         <p class="timeline-description">
-                            Developed mission-critical systems for financial institutions, processing $1B+ in transactions with 100% uptime.
+                            Developed mission-critical systems for financial institutions, processing transactions with 100% uptime.
                         </p>
                         <div class="timeline-tech">
                             <span class="tech-item">Java</span>
@@ -1636,10 +1583,10 @@
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <div class="timeline-date">2008 - 2012</div>
+                        <div class="timeline-date">2016 - 2017</div>
                         <h3 class="timeline-title">Tech Founder</h3>
                         <p class="timeline-description">
-                            Bootstrapped my first startup, building a revolutionary CMS that was later acquired by a major tech company.
+                            Bootstrapped my first startup, building innovative solutions that addressed local market needs.
                         </p>
                         <div class="timeline-tech">
                             <span class="tech-item">PHP</span>
@@ -1648,54 +1595,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Industry Titans Say</h2>
-            <div class="testimonials-container">
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        Working with The Coding Virtuoso was the best decision we made. Their code is poetry in motion—elegant, efficient, and bulletproof. They took our vague concept and transformed it into a market-leading product that outperforms competitors in every metric.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="CEO">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>CEO, TechUnicorn Inc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        In my 20 years in tech, I've never seen a developer with such comprehensive mastery across the stack. They architected a system that scaled from 0 to 10M users without breaking a sweat. Their code reviews are legendary—every comment is a masterclass in software engineering.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="CTO">
-                        </div>
-                        <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <p>CTO, Global Enterprises</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        The Coding Virtuoso solved in two weeks what our team couldn't figure out in six months. Their ability to diagnose complex problems and implement elegant solutions is unparalleled. We've hired them as our secret weapon for every major project since.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1067&q=80" alt="Director">
-                        </div>
-                        <div class="author-info">
-                            <h4>David Rodriguez</h4>
-                            <p>Director of Engineering, FinTech Corp</p>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2012 - 2016</div>
+                        <h3 class="timeline-title">Education Journey</h3>
+                        <p class="timeline-description">
+                            Earned my Software Engineering degree at University of Nairobi, then specialized at Moringa School, ALX Africa, and PLP Africa - Africa's top tech institutions.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-item">Computer Science</span>
+                            <span class="tech-item">Full-Stack</span>
+                            <span class="tech-item">Cloud</span>
+                            <span class="tech-item">AI/ML</span>
                         </div>
                     </div>
                 </div>
@@ -1706,7 +1617,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2>Let's Build Something Legendary</h2>
+            <h2>Let's Build Something Amazing</h2>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1715,7 +1626,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Email Me</h3>
-                            <a href="mailto:genius@codingvirtuoso.dev">genius@codingvirtuoso.dev</a>
+                            <a href="mailto:joshualedama3@gmail.com">joshualedama3@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1724,7 +1635,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Call Me</h3>
-                            <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                            <a href="tel:+254725401725">+254 725 401 725</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1732,36 +1643,19 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Find Me</h3>
-                            <p>Silicon Valley, CA | Remote Worldwide</p>
+                            <h3>Location</h3>
+                            <p>Nairobi, Kenya | Remote Worldwide</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
+                            <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Availability</h3>
-                            <p>Currently accepting select projects with minimum $50k budget</p>
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/254725401725" target="_blank">+254 725 401 725</a>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Vision" required></textarea>
-                        </div>
-                        <button type="submit" class="form-submit">Send Message <i class="fas fa-paper-plane"></i></button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -1772,9 +1666,9 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h3>The Coding Virtuoso</h3>
+                    <h3>Joshua Ledama</h3>
                     <p>
-                        Transforming ideas into digital masterpieces with unparalleled technical expertise and creative vision.
+                        Full-stack developer creating digital solutions that make an impact.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
@@ -1804,21 +1698,9 @@
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Code Audits</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>
-                        Subscribe to my newsletter for tech insights, case studies, and exclusive content.
-                    </p>
-                    <form class="newsletter-form">
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <button type="submit" class="btn">Subscribe</button>
-                    </form>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 The Coding Virtuoso. All Rights Reserved. <span class="monospace">Crafted with <i class="fas fa-heart" style="color: var(--accent);"></i> and 100% custom code</span></p>
+                <p>&copy; 2023 Joshua Ledama. All Rights Reserved. <span class="monospace">Crafted with <i class="fas fa-heart" style="color: var(--accent);"></i> and 100% custom code</span></p>
             </div>
         </div>
     </footer>
@@ -1946,36 +1828,6 @@
         // Observe all sections
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
-        });
-
-        // Simple testimonial slider
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial-slide');
-        
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial, i) => {
-                testimonial.style.display = i === index ? 'block' : 'none';
-            });
-        }
-        
-        // Initialize
-        showTestimonial(0);
-        
-        // Auto-rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        }, 5000);
-
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to a server
-            alert('Thank you for your message! I will respond to you soon.');
-            contactForm.reset();
         });
 
         // 3D Cube Animation
